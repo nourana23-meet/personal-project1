@@ -31,6 +31,8 @@ form .con {
     flex-wrap: wrap;
     align-items: center;
     line-height: 100px;
+    padding-right: 5%;
+    padding-left: 14%;
 }
 
 header {
@@ -41,11 +43,13 @@ header h2 {
     font-size: 350%;
     font-family: 'Playfair Display', serif;
     color: #3e403f;
+    padding-right: 8%;
 }
 
 header p {
   letter-spacing: 0.05em;
-  font-size: 120%;
+  font-size: 110%;
+
 }
 
 

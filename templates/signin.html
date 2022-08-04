@@ -18,7 +18,7 @@
            <i class="fa fa-user-circle"></i>
          </span>
         <!--   user name Input-->
-         <input class="form-input" id="txt-input" name="username" type="text" placeholder="Username" required>
+         <input class="form-input" id="txt-input" name="email" type="text" placeholder="email" required>
       <br>
            <!--   Password -->
       <span class="input-item">
@@ -28,10 +28,10 @@
       <input class="form-input" name="password" type="password" placeholder="Password" id="pwd"  name="password" required>
 
       <button class="log-in"> Log In </button>
-      <button class="log-in">Sign Up </button>
    </div>
    </div>
 </form>
+      <a href='{{url_for( "signup" )}}'><button class="log-in">Sign Up </button></a>
 </div>
 </body>
 </html>

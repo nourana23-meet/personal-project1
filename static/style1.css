@@ -1,0 +1,58 @@
+body {background-color: burlywood;}
+
+.topnav {
+  overflow: hidden;
+  background-color: blanchedalmond;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+.box {
+  border: 5px outset saddlebrown;
+  background-color: blanchedalmond;
+  text-align: center;
+
+}
+
+img {
+    width: 20%;
+    height: 35%; 
+    object-fit: contain;
+}
+
+h1 {
+	color: brown;
+
+}
+
+h2 {
+	color: darkgoldenrod;
+}
+
+.button {
+  color: brown;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 4px 2px;
+  background-color: tan;
+  padding: 10px 25px;
+}
