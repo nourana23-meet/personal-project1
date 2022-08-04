@@ -35,12 +35,9 @@ def login():
 	if request.method == 'POST':
 		email = request.form['email']
 		password = request.form['password']
-		Name = request.form['name']
-		Bio = request.form['bio']
 		try:
 			login_session['user'] = auth.sign_in_with_email_and_password(email, password)
-			user = {"name": Name, "bio": Bio}
-			db.child("usera").child(login_session['user']['localId']).set(user)
+	
 			return redirect(url_for('Home'))
 		except:
 			return render_template('signin.html')
@@ -51,9 +48,13 @@ def signup():
 	error = ""
 	if request.method == 'POST':
 		email = request.form['email']
-		password = request.form['password']			
+		password = request.form['password']	
+		Name = request.form['name']
+		Bio = request.form['bio']	
 		try:
 			login_session['user'] = auth.create_user_with_email_and_password(email, password)
+			user = {"name": Name, "bio": Bio}
+			db.child("user").child(login_session['user']['localId']).set(user)
 			return redirect(url_for('Home'))
 		except:
 			error = "Authentication failed"
@@ -67,7 +68,8 @@ def Product():
 
 @app.route('/home')
 def Home():
-	return render_template('home.html')
+	user = db.child("user").child(login_session['user']['localId']).get().val()
+	return render_template('home.html',user=user)
 
 
 if __name__ == '__main__':
